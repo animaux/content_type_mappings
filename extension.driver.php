@@ -204,7 +204,7 @@ Class extension_Content_Type_Mappings extends Extension {
     public function resolveType($type)
     {
         // Fix issue #2, for downloadables files
-        if ($type{0} == '.') {
+        if ($type[0] == '.') {
             return Symphony::Configuration()->get(strtolower(substr($type, 1)), self::SETTINGS_GROUP);
         } else {
             return Symphony::Configuration()->get(strtolower($type), self::SETTINGS_GROUP);
@@ -226,7 +226,7 @@ Class extension_Content_Type_Mappings extends Extension {
                 Frontend::Page()->addHeaderToPage('Content-Type', $content_type);
             }
 
-            if ($type{0} == '.') {
+            if ($type[0] == '.') {
                 $page_params = Frontend::Page()->Params();
                 $filename = trim(str_replace('/', '.', $page_params['current-path']), '.');
                 Frontend::Page()->addHeaderToPage('Content-Disposition', "attachment; filename={$filename}{$type}");

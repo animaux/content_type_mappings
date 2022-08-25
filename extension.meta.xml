@@ -24,6 +24,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.6.4" date="2022-08-25" min="2.7.10" max="2.x.x">
+			- PHP 8.1 fixes, may require PHP 7, remove curly braces
+		</release>
 		<release version="1.6.3" date="2017-06-16" min="2.4" max="2.x.x">
 			- Fix wrong github link
 		</release>
