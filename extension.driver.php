@@ -112,9 +112,11 @@ Class extension_Content_Type_Mappings extends Extension {
         $content->appendChild($columns);
 
         // Page type column
+        $values['page-type'] = $values['page-type'] ?? null;
         $page_type = $this->generateLabelInput($columns, 'Page Type', 'page-type', $values['page-type']);
 
         // Mime type column
+        $values['mime-type'] = $values['mime-type'] ?? null;
         $mime_type = $this->generateLabelInput($columns, 'Mime Type', 'mime-type', $values['mime-type']);
 
         // Append header and content
